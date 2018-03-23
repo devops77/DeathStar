@@ -4,7 +4,6 @@
 #include "Actor.h"
 #include "Actor.h"
 
-#include <string>
 
 /**
   * class TieFighter
@@ -15,6 +14,15 @@
 
 class TieFighter : virtual public Actor, virtual public Actor
 {
+
+private:
+	enum NumberOfLights (TieFighterNumbeOfLightsInner=2, TieFighterNumberOfLightsOuter=4);
+	// lights for inner explosion
+	uint8_t  innerLights[TieFighterNumbeOfLightsInner];
+	uint8_t  outerLightIds[TieFighterNumberOfLightsOuter];
+
+	void initAttributes () ;
+
 public:
 
   // Constructors/Destructors
@@ -31,19 +39,6 @@ public:
    */
   virtual ~TieFighter ();
 
-  // Static Public attributes
-  //  
-
-  // Public attributes
-  //  
-
-
-  // Public attribute accessor methods
-  //  
-
-
-  // Public attribute accessor methods
-  //  
 
 
 
@@ -84,94 +79,7 @@ public:
   {
   }
 
-protected:
 
-  // Static Protected attributes
-  //  
-
-  // Protected attributes
-  //  
-
-public:
-
-
-  // Protected attribute accessor methods
-  //  
-
-protected:
-
-public:
-
-
-  // Protected attribute accessor methods
-  //  
-
-protected:
-
-
-private:
-
-  // Static Private attributes
-  //  
-
-  // Private attributes
-  //  
-
-  // lights for inner explosion
-  uint8_t  innerLights[TieFighterNumbeOfLightsInner];
-  uint8_t  outerLightIds[TieFighterNumberOfLightsOuter];
-public:
-
-
-  // Private attribute accessor methods
-  //  
-
-private:
-
-public:
-
-
-  // Private attribute accessor methods
-  //  
-
-
-  /**
-   * Set the value of innerLights
-   * lights for inner explosion
-   * @param new_var the new value of innerLights
-   */
-  void setInnerLights (uint8_t  new_var[TieFighterNumbeOfLightsInner])   {
-      *innerLights = *new_var;
-  }
-
-  /**
-   * Get the value of innerLights
-   * lights for inner explosion
-   * @return the value of innerLights
-   */
-  uint8_t * getInnerLights ()   {
-    return innerLights;
-  }
-
-  /**
-   * Set the value of outerLightIds
-   * @param new_var the new value of outerLightIds
-   */
-  void setOuterLightIds (uint8_t  new_var[TieFighterNumberOfLightsOuter])   {
-      *outerLightIds = *new_var;
-  }
-
-  /**
-   * Get the value of outerLightIds
-   * @return the value of outerLightIds
-   */
-  uint8_t * getOuterLightIds ()   {
-    return outerLightIds;
-  }
-private:
-
-
-  void initAttributes () ;
 
 };
 
