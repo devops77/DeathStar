@@ -4,23 +4,9 @@
 //  
 
 Actor::Actor () {
-initAttributes();
+	initAttributes();
 }
 
 Actor::~Actor () { }
 
-//  
-// Methods
-//  
-
-
-// Accessor methods
-//  
-
-
-// Other methods
-//  
-
-void Actor::initAttributes () {
-}
 

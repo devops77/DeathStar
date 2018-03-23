@@ -4,7 +4,8 @@
 
 #include <Arduino.h>
 #include <Adafruit_NeoPixel.h>
-
+#include "NeoPixelColor.h"
+#include <stdint.h>
 
 /**
   * class Actor
@@ -13,6 +14,13 @@
 
 class Actor
 {
+
+private:
+	uint8_t sceen;
+	uint32_t nextUpdate;
+
+	void initAttributes () ;
+
 public:
 
   // Constructors/Destructors
@@ -29,22 +37,6 @@ public:
    */
   virtual ~Actor ();
 
-  // Static Public attributes
-  //  
-
-  // Public attributes
-  //  
-
-
-  // Public attribute accessor methods
-  //  
-
-
-  // Public attribute accessor methods
-  //  
-
-
-
   /**
    * use to set
    * @param  lights
@@ -56,14 +48,6 @@ public:
   }
 
 
-  /**
-   * takes integer that describes the seen
-   * 
-   * @param  newSceen
-   */
-  void setSceen (   unint8_t newSceen)
-  {
-  }
 
 
   /**
@@ -94,55 +78,6 @@ public:
   void update ()
   {
   }
-
-protected:
-
-  // Static Protected attributes
-  //  
-
-  // Protected attributes
-  //  
-
-public:
-
-
-  // Protected attribute accessor methods
-  //  
-
-protected:
-
-public:
-
-
-  // Protected attribute accessor methods
-  //  
-
-protected:
-
-
-private:
-
-  // Static Private attributes
-  //  
-
-  // Private attributes
-  //  
-
-  uint8_t sceen;
-  uint32_t nextUpdate;
-public:
-
-
-  // Private attribute accessor methods
-  //  
-
-private:
-
-public:
-
-
-  // Private attribute accessor methods
-  //  
 
 
   /**
@@ -176,10 +111,8 @@ public:
   uint32_t getNextUpdate ()   {
     return nextUpdate;
   }
-private:
 
 
-  void initAttributes () ;
 
 };
 

@@ -2,7 +2,9 @@
 #ifndef NEOPIXELCOLOR_H
 #define NEOPIXELCOLOR_H
 
-#include <string>
+#include <Arduino.h>
+#include <Adafruit_NeoPixel.h>
+
 
 /**
   * class NeoPixelColor
