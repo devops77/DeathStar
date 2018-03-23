@@ -1,8 +1,10 @@
 
+#include <stdint.h>
+
 #ifndef SCEENBASE_H
 #define SCEENBASE_H
 
-#include <string>
+
 
 /**
   * class SceenBase
@@ -11,10 +13,15 @@
 
 class SceenBase
 {
+private:
+  uint8_t step;
+
+
+  void initAttributes () ;
+
+
 public:
 
-  // Constructors/Destructors
-  //  
 
 
   /**
@@ -26,21 +33,6 @@ public:
    * Empty Destructor
    */
   virtual ~SceenBase ();
-
-  // Static Public attributes
-  //  
-
-  // Public attributes
-  //  
-
-
-  // Public attribute accessor methods
-  //  
-
-
-  // Public attribute accessor methods
-  //  
-
 
 
   /**
@@ -57,56 +49,6 @@ public:
   void run ()
   {
   }
-
-protected:
-
-  // Static Protected attributes
-  //  
-
-  // Protected attributes
-  //  
-
-public:
-
-
-  // Protected attribute accessor methods
-  //  
-
-protected:
-
-public:
-
-
-  // Protected attribute accessor methods
-  //  
-
-protected:
-
-
-private:
-
-  // Static Private attributes
-  //  
-
-  // Private attributes
-  //  
-
-  // current and next step
-  uint8_t step;
-public:
-
-
-  // Private attribute accessor methods
-  //  
-
-private:
-
-public:
-
-
-  // Private attribute accessor methods
-  //  
-
 
   /**
    * Set the value of step
@@ -125,10 +67,8 @@ public:
   uint8_t getStep ()   {
     return step;
   }
-private:
 
 
-  void initAttributes () ;
 
 };
 

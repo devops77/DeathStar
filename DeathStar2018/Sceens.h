@@ -1,8 +1,9 @@
 
+#include <stdint.h>
+
 #ifndef SCEENS_H
 #define SCEENS_H
 
-#include <string>
 
 /**
   * class Sceens

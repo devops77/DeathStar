@@ -3,8 +3,8 @@
 // Constructors/Destructors
 //  
 
-DeathRay::DeathRay () {
-initAttributes();
+DeathRay::DeathRay ()
+{
 }
 
 DeathRay::~DeathRay () { }
@@ -21,6 +21,5 @@ DeathRay::~DeathRay () { }
 // Other methods
 //  
 
-void DeathRay::initAttributes () {
-}
+
 

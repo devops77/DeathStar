@@ -1,9 +1,13 @@
 
+
+#include <stdint.h>
+
+
 #ifndef TIEFIGHTEREXPLODE_H
 #define TIEFIGHTEREXPLODE_H
 #include "SceenBase.h"
+#include "TieFighter.h"
 
-#include <string>
 
 /**
   * class TieFighterExplode

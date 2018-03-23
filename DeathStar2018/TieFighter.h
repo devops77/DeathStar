@@ -2,23 +2,21 @@
 #ifndef TIEFIGHTER_H
 #define TIEFIGHTER_H
 #include "Actor.h"
-#include "Actor.h"
 
 
 /**
   * class TieFighter
-  * Need to define
-  * #define TieFighterNumbeOfLightsInner 2
-  * #define TieFighterNumbeOfLightsOuter 6
-  */
+  *
+*/
+#define TieFighterNumberOfLightsInner 2
+#define TieFighterNumberOfLightsOuter 6
 
-class TieFighter : virtual public Actor, virtual public Actor
+class TieFighter :  public Actor
 {
 
 private:
-	enum NumberOfLights (TieFighterNumbeOfLightsInner=2, TieFighterNumberOfLightsOuter=4);
 	// lights for inner explosion
-	uint8_t  innerLights[TieFighterNumbeOfLightsInner];
+	uint8_t  innerLights  [TieFighterNumberOfLightsInner];
 	uint8_t  outerLightIds[TieFighterNumberOfLightsOuter];
 
 	void initAttributes () ;
