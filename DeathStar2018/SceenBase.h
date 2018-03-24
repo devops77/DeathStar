@@ -38,17 +38,13 @@ public:
   /**
    * called to start a screen as part of sceen change
    */
-  virtual void start ()
-  {
-  }
+  virtual void start () = 0;
 
 
   /**
    * called by actor, runst the current step
    */
-  void run ()
-  {
-  }
+  virtual void run () =0;
 
   /**
    * Set the value of step

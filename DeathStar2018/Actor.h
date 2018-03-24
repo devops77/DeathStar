@@ -6,6 +6,9 @@
 #include <Adafruit_NeoPixel.h>
 #include "NeoPixelColor.h"
 #include <stdint.h>
+#include "SceenBase.h"
+#include "Sceens.h"
+
 
 /**
   * class Actor
@@ -16,10 +19,13 @@ class Actor
 {
 
 private:
+	void initAttributes () ;
+
+protected:
 	uint8_t sceen;
 	uint32_t nextUpdate;
+	SceenBase* currentSceen;
 
-	void initAttributes () ;
 
 public:
 
@@ -37,17 +43,6 @@ public:
    */
   virtual ~Actor ();
 
-  /**
-   * use to set
-   * @param  lights
-   * @param  numberOfLights
-   * @param  newColor
-   */
-  void setLights (int  lights, int numberOfLights, NeoPixelColor newColor)
-  {
-  }
-
-
 
 
   /**
@@ -58,26 +53,20 @@ public:
    *    *
    * 
    */
-  void changeSceen ()
-  {
-  }
+  virtual  void changeSceen (uint8_t newsceen) = 0;
 
 
   /**
    * this is what gets called every so often maybe every 5 ms??
    */
-  virtual void run ()
-  {
-  }
+  virtual void run () =0;
 
 
   /**
    * called when it is time to do something
    * based on sine calls other updades  Case Sceen::Tie1Explodes doTieEsxplodes seen
    */
-  void update ()
-  {
-  }
+  virtual void update () =0;
 
 
   /**
